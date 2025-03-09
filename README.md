@@ -1,46 +1,118 @@
-# Getting Started with Create React App
+# AWeber Template Previewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application designed to preview email templates and manage a list of customers, inspired by AWeber's features.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project showcases a modern frontend application built with React and TypeScript. It includes features such as:
 
-### `npm start`
+- Email template previewing  
+- Customer list management  
+- Form submission simulation  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application utilizes a mock API for data fetching and demonstrates efficient rendering of large lists using virtualization.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: For building the user interface and handling state changes.  
+- **TypeScript**: Ensures type safety and maintainability throughout the codebase.  
+- **Tailwind CSS**: Provides responsive styling and layout management.  
+- **Material-UI**: Used for UI components like dropdowns and buttons.  
+- **React Query**: Handles data fetching and caching from a mock API.  
+- **json-server**: Simulates a backend API for testing purposes.  
+- **Faker**: Generates fake customer data for demonstration.  
+- **react-window**: Efficiently renders large lists of customers.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+### Email Template Previewer
+- Select and preview different email templates fetched from a mock API.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Customer List
+- Displays a list of 1000 fake customers efficiently using virtualization.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Form Submission
+- Simulates submitting a selected template to a backend endpoint.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Notifications
+- Displays success or error notifications upon form submission.  
 
-### `npm run eject`
+## Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Clone the repository:
+```bash
+git clone https://github.com/freedomwithin/aweber-template-previewer.git
+```
+Install dependencies:
+```bash
+npm install
+````
+Start the mock API server:
+```BASH
+json-server --watch db.json --port 3001
+```
+Start the React development server:
+```bash
+npm start
+```
+Open your browser and navigate to http://localhost:3000.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Testing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This project includes unit tests, integration tests, and end-to-end tests to ensure functionality and reliability.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Unit Tests (Jest & React Testing Library)
+Unit tests are written for individual components to verify their behavior in isolation.
 
-## Learn More
+Running Unit Tests:
+```bash
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Example Tests:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. TemplateSelector Component:
+Verifies that templates are rendered correctly.
+Ensures API calls fetch template data.
+Handles edge cases, such as empty or invalid data.
+
+2. CustomerList Component:
+Ensures that the customer list displays correctly.
+Tests virtualization for performance with large datasets.
+
+End-to-End Tests (Cypress)
+End-to-end tests simulate user interactions to verify that the entire application works as expected.
+## Running Cypress Tests:
+
+1. Open the Cypress Test Runner:
+```bash
+npx xypress open
+```
+2. Select a test file (e.g., email_template.cy.js) in the Cypress UI to run it interactively.
+
+## Example End-to-End Tests:
+1. Homepage Loading:
+Verifies that the homepage loads successfully and displays the correct title.
+2. Template Selection:
+Simulates selecting an email template from the dropdown.
+Verifies that the template preview is displayed correctly.
+3. Form Submission:
+Simulates submitting an email template.
+Mocks API responses for success and error scenarios using fixtures (templates.json).
+## Fixtures:
+Fixtures are stored in cypress/fixtures to mock API responses during tests.
+
+Example fixture file (templates.json):
+```bash
+[
+  { "id": 1, "name": "Mock Template", "subject": "Mock Subject", "body": "<p>Mock Body</p>" },
+  { "id": 2, "name": "Another Template", "subject": "Another Subject", "body": "<p>Another Body</p>" }
+]
+```
+Contributing
+
+Contributions are welcome! Feel free to submit pull requests or report issues.
+
+License
+
+This project is licensed under the MIT License. 

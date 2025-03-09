@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "Mock Template", "subject": "Mock Subject", "body": "<p>Mock Body</p>" },
+  { "id": 2, "name": "Another Template", "subject": "Another Subject", "body": "<p>Another Body</p>" }
+]

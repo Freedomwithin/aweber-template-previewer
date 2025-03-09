@@ -1,0 +1,47 @@
+I have  developed a React application inspired by AWeber's features, focusing on email template previewing and customer management. The project demonstrates several key technologies and concepts:
+
+React with TypeScript:
+The application is built using React and TypeScript for type safety and maintainability.
+
+Tailwind CSS:
+Used for styling and layout, providing a responsive and visually appealing UI.
+
+Material-UI:
+Utilized for UI components like dropdowns and buttons, enhancing user interaction.
+
+React Query:
+Implemented for fetching data from a mock API, handling caching and state management efficiently.
+
+Mock API with json-server:
+Created a local mock API using json-server to simulate backend data fetching.
+
+Virtualized Lists:
+Used react-window to efficiently render a large list of customers, improving performance.
+
+Modular Structure:
+Organized the code into separate components (TemplateSelector, TemplatePreview, CustomerList) for better maintainability.
+
+Key Features:
+
+Email Template Previewer:
+Users can select and preview different email templates.
+Templates are fetched from a mock API.
+
+Customer List:
+Displays a list of 1000 fake customers efficiently using virtualization.
+Customers are generated using Faker.
+Form Submission:
+Simulates submitting a selected template to a backend endpoint.
+Notifications:
+Displays success or error notifications upon form submission.
+
+Technologies Used:
+React
+TypeScript
+Tailwind CSS
+Material-UI
+React Query
+json-server (for mock API)
+Faker (for generating fake customer data)
+react-window (for virtualized lists)
+This project demonstrates a solid understanding of modern frontend development practices and technologies, making it a great showcase for your skills.

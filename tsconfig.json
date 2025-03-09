@@ -18,8 +18,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    // Added baseUrl for resolving non-relative module imports
+    "baseUrl": "./",
+    // Optional: Configure paths for aliasing directories (if needed)
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   },
+  // Ensure src directory is included
   "include": [
     "src"
   ]

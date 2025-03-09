@@ -1,0 +1,34 @@
+{
+  "templates": [
+    {
+      "id": "1",
+      "name": "Welcome Email",
+      "subject": "Welcome to Our Newsletter!",
+      "body": "<p>Thank you for subscribing to our newsletter!</p>"
+    },
+    {
+      "id": "2",
+      "name": "Promotional Email",
+      "subject": "Exclusive Offer Just For You",
+      "body": "<p>Get 20% off your next purchase!</p>"
+    },
+    {
+      "id": "3",
+      "name": "Newsletter",
+      "subject": "Weekly Newsletter - Stay Updated!",
+      "body": "<p>Here's the latest news and updates.</p>"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "56eb",
+      "templateType": "promotion",
+      "selectedTemplate": {
+        "id": "1",
+        "name": "Welcome Email",
+        "subject": "Welcome to Our Newsletter!",
+        "body": "<p>Thank you for subscribing to our newsletter!</p>"
+      }
+    }
+  ]
+}
