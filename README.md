@@ -2,6 +2,26 @@
 
 A React application designed to preview email templates and manage a list of customers, inspired by AWeber's features.
 
+## Table of Contents
+- [Overview](#overview)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+  - [Email Template Previewer](#email-template-previewer)
+  - [Customer List](#customer-list)
+  - [Form Submission](#form-submission)
+  - [Notifications](#notifications)
+- [Setup](#setup)
+- [Running the Application](#running-the-application)
+  - [Option 1: Manual Setup](#option-1-manual-setup)
+  - [Option 2: Using the Scripts](#option-2-using-the-scripts)
+- [Testing](#testing)
+  - [Unit Tests (Jest & React Testing Library)](#unit-tests-jest--react-testing-library)
+  - [End-to-End Tests (Cypress)](#end-to-end-tests-cypress)
+- [Fixtures](#fixtures)
+- [Contributing](#contributing)
+- [License](#license)
+
+
 ## Overview
 
 This project showcases a modern frontend application built with React and TypeScript. It includes features such as:
@@ -55,6 +75,38 @@ Start the React development server:
 ```bash
 npm start
 ```
+Open your browser and navigate to http://localhost:3000.
+
+## Running the Application
+You can start the application manually or use the provided scripts (start-dev.sh or start-dev.command) to simplify the process.
+## Option 1: Manual Setup
+1. Start the mock API server:
+```bash
+json-server --watch db.json --port 3001
+```
+2. Start the React development server:
+```bash
+npm start
+```
+
+## Option 2: Using the Scripts
+
+## On macOS:
+1. Use the .command script:
+Double-click start-dev.command in Finder, or run it from Terminal:
+```bash
+./start-dev.command
+```
+## On Linux/Other Systems:
+1. Use the .sh script:
+Run the following command in Terminal:
+```bash
+./start-dev.sh
+```
+Both scripts will:
+Start the mock API server on port 3001.
+Start the React development server.
+Automatically open http://localhost:3000 in your default browser.
 Open your browser and navigate to http://localhost:3000.
 
 ## Testing
