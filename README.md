@@ -15,6 +15,7 @@
 A React application designed to preview email templates and manage a list of customers.
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
@@ -22,66 +23,75 @@ A React application designed to preview email templates and manage a list of cus
   - [Customer List](#customer-list)
   - [Form Submission](#form-submission)
   - [Notifications](#notifications)
-- [Setup](#setup)
-  - Clone the Repository
-  - Install Dependencies
-  - Start the Application
-  - Using Automation Scripts
+- [Setup and Running the Application](#setup-and-running-the-application)
+  - [Clone the Repository](#clone-the-repository)
+  - [Install Dependencies](#install-dependencies)
+  - [Start the Application](#start-the-application)
+  - [Using Automation Scripts](#using-automation-scripts)
 - [Testing](#testing)
-  - [Unit Tests](#unit-tests)
+  - [Unit Tests (Jest & React Testing Library)](#unit-tests-jest--react-testing-library)
   - [End-to-End Tests (Cypress)](#end-to-end-tests-cypress)
 - [Test Fixtures](#test-fixtures)
 - [Contributing](#contributing)
 - [License](#license)
 
-
 ## Overview
 
 This project showcases a modern frontend application built with React and TypeScript. It includes features such as:
 
-- Email template previewing  
-- Customer list management  
-- Form submission simulation  
+- Email template previewing
+- Customer list management
+- Form submission simulation
 
 The application utilizes a mock API for data fetching and demonstrates efficient rendering of large lists using virtualization.
 
 ## Technologies Used
 
-- **React**: For building the user interface and handling state changes.  
-- **TypeScript**: Ensures type safety and maintainability throughout the codebase.  
-- **Tailwind CSS**: Provides responsive styling and layout management.  
-- **Material-UI**: Used for UI components like dropdowns and buttons.  
-- **React Query**: Handles data fetching and caching from a mock API.  
-- **json-server**: Simulates a backend API for testing purposes.  
-- **Faker**: Generates fake customer data for demonstration.  
-- **react-window**: Efficiently renders large lists of customers.  
+- **React**: For building the user interface and handling state changes.
+- **TypeScript**: Ensures type safety and maintainability throughout the codebase.
+- **Tailwind CSS**: Provides responsive styling and layout management.
+- **Material-UI**: Used for UI components like dropdowns and buttons.
+- **React Query**: Handles data fetching and caching from a mock API.
+- **json-server**: Simulates a backend API for testing purposes.
+- **Faker**: Generates fake customer data for demonstration.
+- **react-window**: Efficiently renders large lists of customers.
 
 ## Features
 
 ### Email Template Previewer
+
 Quickly select and preview email templates fetched from a mock API:
-  - Dynamically updates subject lines and body content.
-  - Supports multiple templates with varying designs.
+
+- Dynamically updates subject lines and body content.
+- Supports multiple templates with varying designs.
 
 ### Customer List
+
 Efficiently displays a list of up to 1000 fake customers using virtualization:
-  - Smooth scrolling performance.
-  - Search functionality (if implemented).
+
+- Smooth scrolling performance.
+- Search functionality (if implemented).
 
 ### Form Submission
+
 Simulates submitting a selected template to a backend endpoint:
-  - Handles both success and error responses gracefully.
-  - Displays user-friendly notifications.
+
+- Handles both success and error responses gracefully.
+- Displays user-friendly notifications.
 
 ### Notifications
+
 Provides visual feedback on form submission:
-  - Success notifications for successful submissions.
-  - Error alerts when submissions fail.
+
+- Success notifications for successful submissions.
+- Error alerts when submissions fail.
 
 ## Setup and Running the Application
 
 ### Prerequisites
+
 Ensure you have the following installed on your system:
+
 - **Node.js** (v14 or later)
 - **npm** (v6 or later, which comes with Node.js)
 
@@ -91,15 +101,15 @@ Follow these steps to set up and run the application:
 ```bash
 git clone https://github.com/freedomwithin/aweber-template-previewer.git
 ```
-Install dependencies:
+## Install dependencies:
 ```bash
 npm install
 ````
-Start the mock API server:
-```BASH
+## Start the mock API server:
+```bash
 json-server --watch db.json --port 3001
 ```
-Start the React development server:
+## Start the Application:
 ```bash
 npm start
 ```
@@ -130,7 +140,7 @@ Open your browser and navigate to http://localhost:3000.
 
 This project includes unit tests, integration tests, and end-to-end tests to ensure functionality and reliability.
 
-Unit Tests (Jest & React Testing Library)
+## Unit Tests (Jest & React Testing Library)
 Unit tests are written for individual components to verify their behavior in isolation.
 
 Running Unit Tests:
@@ -151,7 +161,7 @@ Tests virtualization for performance with large datasets.
 
 End-to-End Tests (Cypress)
 End-to-end tests simulate user interactions to verify that the entire application works as expected.
-## Running Cypress Tests:
+## End-to-End Tests (Cypress):
 
 1. Open the Cypress Test Runner:
 ```bash
@@ -168,11 +178,11 @@ Verifies that the template preview is displayed correctly.
 3. Form Submission:
 Simulates submitting an email template.
 Mocks API responses for success and error scenarios using fixtures (templates.json).
-## Fixtures:
+## Test Fixtures:
 Fixtures are stored in cypress/fixtures to mock API responses during tests.
 
 Example fixture file (templates.json):
-```bash
+```JSON
 [
   { "id": 1, "name": "Mock Template", "subject": "Mock Subject", "body": "<p>Mock Body</p>" },
   { "id": 2, "name": "Another Template", "subject": "Another Subject", "body": "<p>Another Body</p>" }
