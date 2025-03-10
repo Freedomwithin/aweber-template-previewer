@@ -1,14 +1,16 @@
 # AWeber Template Previewer
 
 <div align="center">
-  <img src="assets/screenshots/Awebar Home.png" alt="AWeber Home Screen" width="600">
+  <img src="assets/screenshots/Aweber-Home-Screen.png" alt="AWeber Home Screen" width="600">
   <br>
   <em>AWeber Home Screen</em>
   <br><br>
-  <img src="assets/screenshots/Awebar tests.png" alt="AWeber Tests Screen" width="600">
+  <img src="assets/screenshots/Aweber-Testing-Example.png" alt="AWeber Testing Example" width="600">
   <br>
-  <em>AWeber Tests Screen</em>
+  <em>AWeber Testing Example</em>
 </div>
+
+---
 
 A React application designed to preview email templates and manage a list of customers.
 
