@@ -1,6 +1,16 @@
 # AWeber Template Previewer
 
-A React application designed to preview email templates and manage a list of customers, inspired by AWeber's features.
+<div align="center">
+  <img src="assets/screenshots/Awebar Home.png" alt="AWeber Home Screen" width="600">
+  <br>
+  <em>AWeber Home Screen</em>
+  <br><br>
+  <img src="assets/screenshots/Awebar tests.png" alt="AWeber Tests Screen" width="600">
+  <br>
+  <em>AWeber Tests Screen</em>
+</div>
+
+A React application designed to preview email templates and manage a list of customers.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -11,13 +21,14 @@ A React application designed to preview email templates and manage a list of cus
   - [Form Submission](#form-submission)
   - [Notifications](#notifications)
 - [Setup](#setup)
-- [Running the Application](#running-the-application)
-  - [Option 1: Manual Setup](#option-1-manual-setup)
-  - [Option 2: Using the Scripts](#option-2-using-the-scripts)
+  - Clone the Repository
+  - Install Dependencies
+  - Start the Application
+  - Using Automation Scripts
 - [Testing](#testing)
-  - [Unit Tests (Jest & React Testing Library)](#unit-tests-jest--react-testing-library)
+  - [Unit Tests](#unit-tests)
   - [End-to-End Tests (Cypress)](#end-to-end-tests-cypress)
-- [Fixtures](#fixtures)
+- [Test Fixtures](#test-fixtures)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -46,18 +57,33 @@ The application utilizes a mock API for data fetching and demonstrates efficient
 ## Features
 
 ### Email Template Previewer
-- Select and preview different email templates fetched from a mock API.  
+Quickly select and preview email templates fetched from a mock API:
+  - Dynamically updates subject lines and body content.
+  - Supports multiple templates with varying designs.
 
 ### Customer List
-- Displays a list of 1000 fake customers efficiently using virtualization.  
+Efficiently displays a list of up to 1000 fake customers using virtualization:
+  - Smooth scrolling performance.
+  - Search functionality (if implemented).
 
 ### Form Submission
-- Simulates submitting a selected template to a backend endpoint.  
+Simulates submitting a selected template to a backend endpoint:
+  - Handles both success and error responses gracefully.
+  - Displays user-friendly notifications.
 
 ### Notifications
-- Displays success or error notifications upon form submission.  
+Provides visual feedback on form submission:
+  - Success notifications for successful submissions.
+  - Error alerts when submissions fail.
 
-## Setup
+## Setup and Running the Application
+
+### Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js** (v14 or later)
+- **npm** (v6 or later, which comes with Node.js)
+
+Follow these steps to set up and run the application:
 
 ### Clone the repository:
 ```bash
@@ -77,19 +103,8 @@ npm start
 ```
 Open your browser and navigate to http://localhost:3000.
 
-## Running the Application
-You can start the application manually or use the provided scripts (start-dev.sh or start-dev.command) to simplify the process.
-## Option 1: Manual Setup
-1. Start the mock API server:
-```bash
-json-server --watch db.json --port 3001
-```
-2. Start the React development server:
-```bash
-npm start
-```
-
-## Option 2: Using the Scripts
+## Using Automation Scripts
+To simplify the setup process, automation scripts are provided. These scripts automatically start both the mock API server and the React development server, then open the application in your default browser. This eliminates the need to run multiple commands manually.
 
 ## On macOS:
 1. Use the .command script:
@@ -138,7 +153,7 @@ End-to-end tests simulate user interactions to verify that the entire applicatio
 
 1. Open the Cypress Test Runner:
 ```bash
-npx xypress open
+npx cypress open
 ```
 2. Select a test file (e.g., email_template.cy.js) in the Cypress UI to run it interactively.
 
@@ -161,10 +176,10 @@ Example fixture file (templates.json):
   { "id": 2, "name": "Another Template", "subject": "Another Subject", "body": "<p>Another Body</p>" }
 ]
 ```
-Contributing
+## Contributing
 
 Contributions are welcome! Feel free to submit pull requests or report issues.
 
-License
+## License
 
-This project is licensed under the MIT License. 
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
